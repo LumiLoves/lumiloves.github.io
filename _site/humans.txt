@@ -1,0 +1,12 @@
+/* TEAM */
+Primary Contact: foo
+Site: https://lanyon-plus.sbamin.com/about/
+Twitter: https://twitter.com/abcd
+
+/* THANKS */
+Design Contributors: https://lanyon-plus.sbamin.com/disclosure/
+
+/* SITE */
+Last Updated: 2017/06/19
+Standards: HTML5, CSS3
+Software: Sublime Text, Chrome, Jekyll, Git, Sass

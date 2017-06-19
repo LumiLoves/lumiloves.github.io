@@ -1,0 +1,13 @@
+callback([
+
+  {
+    "text": "Example content",
+    "href": "https://lanyon-plus.sbamin.com/blog/2013/01/01/example_content/"
+  } ,
+
+  {
+    "text": "What's Jekyll?",
+    "href": "https://lanyon-plus.sbamin.com/blog/2015/01/31/whats-jekyll/"
+  } 
+
+])
