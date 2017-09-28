@@ -1,59 +1,73 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<!--  
-====================================================
-Homepage: {{ site.url }}
-Credits: {{ site.url }}/disclosure
-====================================================
--->
+<html>
+
 {% include head.html %}
 
 <body>
+	<div id="wrap">
+  	<!-- Navigation -->
+  	{% include menu.html %}
 
-{% include sidebar.html %}
+    <!-- Icon menu -->
+	  <a
+      {% if site.reverse == true %} id="nav-menu-left"
+      {% else %} id="nav-menu" 
+      {% endif %}
+    >
+	  	<div id="menu"></div>
+	  </a>
 
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <!-- <small>{{ site.tagline }}</small> -->
-            <div class="headicons">
-              <small><a href="{{ site.url }}/about" rel="me" title="About"><i class="iconm iconm-user"></i></a></small>
-              <small><a href="{{ site.url }}/blog" rel="me" title="Blog"><i class="iconm iconm-quill"></i></a></small>
-              <small><a href="{{ site.url }}/contact" rel="me" title="Contact"><i class="iconm iconm-envelop"></i></a></small> 
-            </div>           
-          </h3>
-        </div>
-      </div>
+    <!-- Header -->
+    {% if site.custom_header == true %}
+      {% include header-custom.html %}
+    {% else %}
+      {% include header.html %}
+    {% endif %}
 
-      <div class="container content">
+    <!-- Main content -->
+	  <div id="container">
+  		  
+  		<main>
         {{ content }}
-        {% include footer.html %}
-      </div>
-    </div>
+  	  </main>
+		
+		  <!-- Pagination links -->
+      {% if paginator.total_pages > 1 %}
+        <div class="pagination">
+          {% if paginator.previous_page == 1 %}
+            <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&laquo;</a>
+          {% elsif paginator.previous_page%}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&laquo;</a>
+          {% else %}
+            <span class="page-item">&laquo;</span>
+          {% endif %}
+        
+          {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+              <span class="page-item">{{ page }}</span>
+            {% elsif page == 1 %}
+              <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">{{ page }}</a>
+            {% else %}
+              <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="page-item">{{ page }}</a>
+            {% endif %}
+          {% endfor %}
+        
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&raquo;</a>
+          {% else %}
+            <span class="page-item">&raquo;</span>
+          {% endif %}
+        </div>
+      {% endif %}
+      <!-- // Pagination links -->
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+	  </div>
+    <!-- // Main content -->
 
-    <script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
+    <!-- Footer -->
+    {% include footer.html %}
+  </div>
 
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-
-          checkbox.checked = false;
-        }, false);
-      })(document);
-    </script>
-    {% include scripts.html %}
+  {% include script.html %}
 </body>
 </html>

@@ -1,118 +1,79 @@
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-#permalink:           pretty
-permalink: /blog/:year/:month/:day/:title/
-relative_permalinks: false
+# Site settings
+title: "공대아름"
+description: "프론트엔드 관련 기술을 주제로 합니다."
+url: "https://kimally.github.io/"
+author:
+  name: "Ahreum Kim (Ally)"
+  email: "kim.ah.rm@gmail.com"
+  url: "https://kimally.github.io"
+
+
+# Build settings
+baseurl: / # 주어진 URL 로 웹사이트를 작동시킴
+source: . #Jekyll 이 읽어들일 파일들의 경로
+destination: ./dist-site # Jekyll 이 생성할 파일들의 경로
+permalink: /:year/:month/:title # https://jekyllrb.com/docs/permalinks/#template-variables
+paginate: 10 #######
+paginate_path: /page:num/ #######
 encoding: utf-8
 
-# Setup
-title:          Ally
-#tagline:       'foo's website
-description:    Ally's blog...
-url:            https://kimally.github.io/
-baseurl:        ""
-urlimg:         https://kimally.github.io/images/
-## If you do not have custom domain, comment top three lines, uncomment three lines below and replace dyndna with your github userid and lanyon-plus with your project name. Also, rename CNAME file to CNAME.sample
-#url: https://dyndna.github.io/lanyon-plus
-#baseurl: "/lanyon-plus"
-#urlimg: https://dyndna.github.io/lanyon-plus/images/
+
+# 특정 디렉토리나 파일을 변환되지 않도록 제외시킨다.
+# 지킬에서 빌드되지 않도록하는 폴더를 지정한다
+# exclude: [.git, .gitignore, .sass-cache, node_modules]
+exclude:
+  - .sass-cache
+  - .git
+  - .gitignore
+  - node_modules
+  - READMD.md
+
+
+# Default values
+defaults:
+  -
+    scope:
+      path: "" # https://jekyllrb.com/docs/static-files/#add-front-matter-to-static-files
+      type: "posts"
+    values:
+      layout: "post"
+
+
+# sass는 자동으로 지킬에서 변환한다.
+# css  폴더에 main.scss 하고 sass  폴더의 파일을 임포트한다.
+# 만약 css 폴더없이 sass 를 변환하고 싶다면 grunt 를 이용해야 한다.
+# sass
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+
+# 코드 하이라이트 설정
+# 코드 하이라이트 기능중에 GFM를 사용해서 깃헙사이트와 동일하게 보여준다.
 markdown: kramdown
 kramdown:
-  math_engine: mathjax
-
-paginate: 5
-paginate_path: "/blog/page:num"
-excerpt_separator: <!--more-->
-default_bg: sitebg.jpg
-default_logo: sitelogo.png
-safe: false
-#timezone:    America/Chicago
-future:      true
+  input: GFM
+  syntax_highlighter: rouge
 
 
-## code highlight options
-syntax_highlighter: rouge
-input: GFM
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
 
-gems:
-  - github-pages
-  - font-awesome-sass
-  - jekyll-redirect-from
-  - jekyll-mentions
 
-jekyll-mentions:
-  base_url: https://twitter.com
+# Custom variables
+version: "1.0.0"
+simple_search: http://google.com/search
+google_analytics: UA-51196485-2
+# twitter_username: 
+# github_username: 
+# linkedin_username: 
+# facebook_username: 
+# highlighter: rouge
 
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "rakefile", "README.md", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "LICENSE", "vendor", "assets", "_plugins", "public/dormant"]
 
-# About/contact
-author:
-  name:         Ally Ahreum Kim
-  url:          https://kimally.github.io/
-  avatar:       foo.png
-  email:        kim.ah.rm@gmail.com
-
-# Owner/author information
-owner:
-  name:         Ally Ahreum Kim
-  avatar:       foo.png
-  email:        kim.ah.rm@gmail.com
-  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:  Front-end Engineer
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:      abcd
-  facebook:
-  github:       https://kimally.github.io/
-  stackexchange:  
-  linkedin:     https://www.linkedin.com/in/foo
-  instagram:      
-  flickr:
-  tumblr:  
-  google_plus:  https://plus.google.com/+foo
-  # orcid and google scholar IDs are different than standard username.
-  orcid:        xyz123abc
-  gscholar:     xyz123abc
-
-## sidebar links:
-# For external links add external: true
-links:
-  - title: <i class="iconside iconm-home"></i> Home
-    url: /
-  - title: <i class="iconside iconm-user"></i> About
-    url: /about/
-  - title: <i class="iconside iconm-quill"></i> Blog
-    url: /blog/
-  - title: <i class="fa fa-tags"></i> Tags
-    url: /tags/
-  - title: <i class="fa fa-archive"></i> Archive
-    url: /archive/
-  - title: <i class="iconside iconm-wordpress"></i> Old Blog
-    url: https://foo.wordpress.com
-    external: true
-  - title: <i class="iconside iconm-envelop"></i> Contact
-    url: /contact/
-  - title: <i class="iconside iconm-twitter"></i> Twitter
-    url: https://twitter.com/abcd
-    external: true
-  - title: <i class="iconside iconm-feed2"></i> Feed
-    url: /feed.xml
-
-# Google Custom Search:
-#google_search: xyz123abc
-
-# Twitter stream widget:
-# Replace xyz123abc with your twitter widget id from https://twitter.com/settings/widgets
-#twitter_widget_id: xyz123abc
-
-# Add disqus username for Disqus comment board:
-disqus_shortname: Ally
-
-# Analytics and webmaster tools stuff goes here
-#google_analytics:   xyz123abc
-
-#### For dummy website only - remove if you wish ####
-github_repo: https://github.com/dyndna/lanyon-plus
-version: 1.1.1
-## END ##
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false
