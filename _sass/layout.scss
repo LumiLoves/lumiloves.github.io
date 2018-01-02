@@ -2,7 +2,7 @@
 
 /* Navigation */
 
-#nav, #nav-left { 
+#nav, #nav-left {
   a {
     display: block;
     color: $text-color;
@@ -42,7 +42,7 @@
 #nav-links {
   @media (max-width: 940px) {
     display:none;
-  }   
+  }
   a {
     padding-left: 10px;
     color: $text-color;
@@ -142,7 +142,7 @@
   a { text-decoration: none; display: inline-block; }
   div { margin: 0 auto; }
   h1 {
-    padding-bottom: 0; font-size: 2em; letter-spacing: 11px;
+    padding-bottom: 0; font-size: 2em; letter-spacing: 0px;
     span { color: $text-light-color; font-weight: 300; }
   }
 }
@@ -156,7 +156,7 @@
     // TODO display: block;으로 고치고 after에 디자인 주기
     // https://www.thoughtco.com/palettes-of-the-masters-vincent-van-gogh-2573701
     // &:after { content: ""; display: block; }
-    display: inline-block; padding: 0.5em 0; 
+    display: inline-block; padding: 0.5em 0;
     box-shadow: inset 0 -6px 0 rgba(123,195,222,.5);
     color: #282828;
     -webkit-transition: all .15s ease-in-out;
@@ -188,7 +188,7 @@
   line-height: 1.8em; /* 24px/16px */
   margin-bottom: 1.5em; /* 24px/16px */
   font-weight: 200;
- 
+
   @media (min-width: 940px) {
     line-height: 1.8em; /* 24px/18px */
     margin-bottom: 1.3334em; /* 24px/18px */
