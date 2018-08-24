@@ -15,7 +15,7 @@ author:
   name: "Ahreum Kim"
   nickName: "LUMI"
   email: "kim.ah.rm@gmail.com"
-  url: "https://kimally.github.io"
+  url: "https://lumiloves.github.io"
 
 
 # Build settings
@@ -142,16 +142,16 @@ social:
 # These are for automatically generating sharing metadata for FB and Twitter
 # OS Protocol is for sharing the source of your site, if you're interested. For more, see osprotocol.com
 protocols:
-    fb_image: "/assets/profile.jpeg"
-    fb_image_width: 612
-    fb_image_height: 605
-    fb_image_type: "image/jpeg"
+    # fb_image: "/assets/profile.jpeg"
+    # fb_image_width: 612
+    # fb_image_height: 605
+    # fb_image_type: "image/jpeg"
 
-    twitter_image: "/assets/profile.jpeg"
+    # twitter_image: "/assets/profile.jpeg"
 
-    os_repo: "https://github.com/LumiLoves/lumiloves.github.io"
-    os_rcs_type: "git"
-    os_src: "git@github.com:LumiLoves/lumiloves.github.io.git"
+    # os_repo: "https://github.com/LumiLoves/lumiloves.github.io"
+    # os_rcs_type: "git"
+    # os_src: "git@github.com:LumiLoves/lumiloves.github.io.git"
 
 
 
