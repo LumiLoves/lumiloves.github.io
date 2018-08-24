@@ -1,7 +1,9 @@
 ---
+layout: post
+
 title: '[codewars] (7kyu) T.T.T.26: How many students have finished all the homework'
 description: '[codewars] 알고리즘 풀기'
-tag: [ algorism ]
+tag: [ algorithm ]
 ---
 
 

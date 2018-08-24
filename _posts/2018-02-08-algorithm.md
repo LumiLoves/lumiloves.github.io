@@ -1,4 +1,6 @@
 ---
+layout: post
+
 title: '[freecodecamp] Reverse a String / Factorialize a Number / Check for Palindromes'
 description: 'freecodecamp 알고리즘 풀기'
 tag: [ algorithm ]

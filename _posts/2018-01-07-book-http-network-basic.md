@@ -1,7 +1,9 @@
 ---
+layout: post
+
 title: '책요약 - 그림으로 배우는 HTTP & Network Basic'
 description: ''
-tag: [ http, network ]
+tag: [ http ]
 ---
 
 <!-- # 책요약 - 그림으로 배우는 HTTP & Network Basic -->

@@ -1,7 +1,9 @@
 ---
+layout: post
+
 title: '[codewars] (7kyu) Simple Fun #215: Properly Closed Bracket Word'
 description: '[codewars] 알고리즘 풀기'
-tag: [ algorism ]
+tag: [ algorithm ]
 ---
 
 

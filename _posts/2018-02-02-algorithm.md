@@ -1,7 +1,9 @@
 ---
+layout: post
+
 title: '[codewars] (7kyu) Simple Fun #48: Higher Version'
 description: '[codewars] 알고리즘 풀기'
-tag: [ algorism ]
+tag: [ algorithm ]
 ---
 
 

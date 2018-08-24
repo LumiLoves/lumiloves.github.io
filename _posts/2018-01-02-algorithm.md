@@ -1,7 +1,9 @@
 ---
+layout: post
+
 title: '[codewars] Reversed sequence'
 description: '[codewars] 알고리즘 풀기'
-tag: [ algorism ]
+tag: [ algorithm ]
 ---
 
 

@@ -1,4 +1,6 @@
 ---
+layout: post
+
 title: 'Git/Github에서 file의 이름이나 경로를 변경할 때(rename, move) 히스토리 유지시키는 방법'
 description: 'how to preserve file history when renaming or moving in git'
 tag: [ git ]
