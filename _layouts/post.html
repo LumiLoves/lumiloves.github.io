@@ -49,6 +49,7 @@ layout: default
   <span>이 글 공유하기: </span>
   {% for social in site.social %}
     {% capture full_url %}{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture %}
+    
     {% if social.name == "Twitter" and social.share == true %}
       <a class="twitter" href="//twitter.com/share?text={{ page.title | cgi_escape }}&url={{ full_url | cgi_escape}}&via={{social.username}}"
         onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
