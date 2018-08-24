@@ -37,18 +37,18 @@ tag: [ test ]
 <div style="background: #eee; border-radius: 5px; padding: 20px; text-align: center;">
   <em style="font-size: 0.9em;">[unit] helpers.test.js (유틸 메서드 모음)</em>
 
-  <img src="https://user-images.githubusercontent.com/23192677/44468605-8b5d0300-a660-11e8-906d-ee805bc65e1a.png" alt="helpers.test.js 결과화면" title="클릭하면 확대해서 보실 수 있습니다." width="60%">
+  <img src="https://user-images.githubusercontent.com/23192677/44468605-8b5d0300-a660-11e8-906d-ee805bc65e1a.png" alt="helpers.test.js 결과화면" width="60%">
   <br>
 
   <em style="font-size: 0.9em;">[unit] AutoCompleteSearcher.test.js (자동완성검색 UI)</em>
 
-  <img src="https://user-images.githubusercontent.com/23192677/44468631-9ca60f80-a660-11e8-93bb-e7d1d1c1241c.png" alt="AutoCompleteSearcher.test.js 결과화면" title="클릭하면 확대해서 보실 수 있습니다." width="60%">
+  <img src="https://user-images.githubusercontent.com/23192677/44598298-8093a100-a80d-11e8-9253-bae5039395ad.png" alt="AutoCompleteSearcher.test.js 결과화면" width="60%">
   <br>
 
   <em style="font-size: 0.9em;">[e2e] autoCompleteSearcher.test.js</em>
 
-  <img src="https://user-images.githubusercontent.com/23192677/44468655-adef1c00-a660-11e8-9f95-0be8286d71a0.png" alt="autoCompleteSearcher.test.js 결과화면-01" title="클릭하면 확대해서 보실 수 있습니다." width="60%">
-  <img src="https://user-images.githubusercontent.com/23192677/44468670-b3e4fd00-a660-11e8-9180-580215cf15bd.png" alt="autoCompleteSearcher.test.js 결과화면-02" title="클릭하면 확대해서 보실 수 있습니다." width="60%">
+  <img src="https://user-images.githubusercontent.com/23192677/44468655-adef1c00-a660-11e8-9f95-0be8286d71a0.png" alt="autoCompleteSearcher.test.js 결과화면-01" width="60%">
+  <img src="https://user-images.githubusercontent.com/23192677/44468670-b3e4fd00-a660-11e8-9180-580215cf15bd.png" alt="autoCompleteSearcher.test.js 결과화면-02" width="60%">
 </div>
 
 <br>
@@ -356,6 +356,6 @@ describe('# Storage', () => {
 - [글] [마이크로소프트웨어 393호 중 '자바스크립트와 TDD'](https://www.imaso.co.kr/archives/3408), [3년간의 TDD 인생 회고](http://huns.me/development/2206)
 - [공식사이트 문서] mocha, chai, sinon
 - [코드] [오픈소스 TUI Editor Test](https://github.com/nhnent/tui.editor/tree/master/test), 코드스쿼드 친구들이 작성한 테스트 코드, 기타 자료들의 예제
-- ~~크고 작은 시행착오 및 인내심~~
+- ~~많은 시행착오 및 인내심~~
 
 <br>

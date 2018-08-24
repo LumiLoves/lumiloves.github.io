@@ -1,32 +1,44 @@
-# Site settings
+
+# ===============================
+# Site Setting
+# ===============================
+
+# Site info
 title: "공대아름"
-description: "프론트엔드 관련 기술을 주제로 합니다."
-url: "https://kimally.github.io/"
+description: "프론트엔드를 좋아합니다 :)"
+url: "https://lumiloves.github.io" # the base hostname & protocol for your site
+email: "kim.ah.rm@gmail.com"
+name: "Ahreum Kim"
+# cover: "/assets/header_image.jpg"
+# logo: "/assets/profile.jpeg"
 author:
-  name: "Ahreum Kim (Ally)"
+  name: "Ahreum Kim"
+  nickName: "LUMI"
   email: "kim.ah.rm@gmail.com"
   url: "https://kimally.github.io"
 
 
 # Build settings
-baseurl: / # 주어진 URL 로 웹사이트를 작동시킴
+# Base URL of site (i.e. /blog). It should always start with a slash,
+# and never end with a slash. Set it to a blank value if hosting at the
+# root of your server.
+baseurl:  # 주어진 URL 로 웹사이트를 작동시킴
 source: . #Jekyll 이 읽어들일 파일들의 경로
-destination: ./dist-site # Jekyll 이 생성할 파일들의 경로
 permalink: /:year/:month/:day/:title # https://jekyllrb.com/docs/permalinks/#template-variables
-paginate: 10 #######
-paginate_path: /page:num/ #######
+paginate: 10
+paginate_path: "/page:num/"
+inter_post_navigation: false
 encoding: utf-8
 
 
-# 특정 디렉토리나 파일을 변환되지 않도록 제외시킨다.
-# 지킬에서 빌드되지 않도록하는 폴더를 지정한다
-# exclude: [.git, .gitignore, .sass-cache, node_modules]
-exclude:
-  - .sass-cache
-  - .git
-  - .gitignore
-  - node_modules
-  - READMD.md
+
+# ===============================
+# Post Setting
+# ===============================
+
+# Markdown posting style
+markdown: kramdown
+highlightjs_theme: "tomorrow-night-eighties"
 
 
 # Default values
@@ -37,6 +49,135 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      comments: true
+
+
+# Archive settings (see https://github.com/jekyll/jekyll-archives/)
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
+
+
+# Category descriptions (for archive pages)
+descriptions:
+  # - cat: jekyll
+    # desc: "Posts describing Jekyll setup techniques."
+
+  # - cat: dummy
+    # desc: "Just some placeholder posts, lorem ipsum and the rest."
+
+
+
+# ===============================
+# 외부기능 연결
+# ===============================
+
+
+# Disqus comments
+# - https://ahreumkim-dev.disqus.com/admin/
+disqus_shortname: ahreumkim-dev
+
+
+# Google analytics
+# ga_tracking_id: "UA-51196485-2"
+
+
+# Google search
+# simple_search: http://google.com/search
+
+
+
+# Social icons and sharing options
+#
+# Social settings are used in two places:
+# * In the footer, as links to your personal profiles
+# * After each blog post for sharing widgets
+#
+# Example:
+#
+# social:
+#   - name: Twitter                         # Name of the service
+#     icon: twitter                         # Font Awesome icon to use (minus fa- prefix)
+#     username: "@TheBenCentra"             # (User) Name to display in the footer link
+#     url: https://twitter.com/TheBenCentra # URL of your profile (leave blank to not display in footer)
+#     desc: Follow me on Twitter            # Description to display as link title, etc
+#     share: true                           # Include in the "Share" section of posts
+social:
+  - name: Twitter
+    icon: twitter
+    # username: ??
+    # url: https://twitter.com/??
+    # desc: Follow me on Twitter
+    share: true
+
+  - name: Facebook
+    icon: facebook
+    username: ahreum.kim.393
+    # url:
+    desc: Friend me on Facebook
+    share: true
+
+  - name: GitHub
+    icon: github
+    username: lumiloves
+    url: https://github.com/lumiloves
+    desc: Follow me on GitHub
+    share: true
+
+  # - name: LinkedIn
+  #   icon: linkedin
+  #   username: ?
+  #   url: https://www.linkedin.com/pub/ben-centra/47/769/60a
+  #   desc: Connect with me on LinkedIn
+  #   share: true
+
+
+
+# Social sharing protocols
+# These are for automatically generating sharing metadata for FB and Twitter
+# OS Protocol is for sharing the source of your site, if you're interested. For more, see osprotocol.com
+protocols:
+    fb_image: "/assets/profile.jpeg"
+    fb_image_width: 612
+    fb_image_height: 605
+    fb_image_type: "image/jpeg"
+
+    twitter_image: "/assets/profile.jpeg"
+
+    os_repo: "https://github.com/LumiLoves/lumiloves.github.io"
+    os_rcs_type: "git"
+    os_src: "git@github.com:LumiLoves/lumiloves.github.io.git"
+
+
+
+
+# ===============================
+# Site Build 관련
+# ===============================
+
+
+# External gems
+# See http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html for making `jekyll archives` work.
+gems:
+  - jekyll-archives # Sorry, not GitHub pages friendly!
+  - jekyll-sitemap
+  - jekyll-paginate
+
+
+# 특정 디렉토리나 파일을 변환되지 않도록 제외시킨다.
+# 지킬에서 빌드되지 않도록하는 폴더를 지정한다
+# exclude: [.git, .gitignore, .sass-cache, node_modules]
+exclude:
+  - "/vendor/"
+  - .sass-cache
+  - .git
+  - .gitignore
+  - node_modules
 
 
 # sass는 자동으로 지킬에서 변환한다.
@@ -48,32 +189,6 @@ sass:
   style: :compressed
 
 
-# 코드 하이라이트 설정
-# 코드 하이라이트 기능중에 GFM를 사용해서 깃헙사이트와 동일하게 보여준다.
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
 
 
-# Plugins
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
 
-
-# Custom variables
-version: "1.0.0"
-simple_search: http://google.com/search
-google_analytics: UA-51196485-2
-# twitter_username: 
-# github_username: 
-# linkedin_username: 
-# facebook_username: 
-# highlighter: rouge
-
-
-# Options
-custom_header: false
-custom_nav_footer: false
-reverse: false

@@ -1,17 +1,17 @@
 ---
 layout: page
 title: About
-header: ''
-description: TheReviewIndex aspires to simplify the discovery and research process for gadgets and help you find the right products.
+permalink: /about/
 ---
 
-<img src="https://avatars1.githubusercontent.com/u/23192677?v=4&amp;s=460" alt="" width="190" height="190" style="margin:0;">
+<img src="https://avatars1.githubusercontent.com/u/23192677?v=4&amp;s=460" alt="" style="width:190px !important; height:190px; border-radius: 5px;">
 
+<br>
 
 <!-- ## 소개 -->
 
 안녕하세요. 저는 공대아름이 김아름입니다. (이걸 아시는 분은.. 옛날 사람..)  
-프론트엔드와 UX를 좋아하는 개발자 입니다 :0
+프론트엔드와 UX를 좋아하는 개발자입니다 :0
 
 
 ## Work
@@ -20,10 +20,10 @@ description: TheReviewIndex aspires to simplify the discovery and research proce
 
 
 ## Experience
-
-- RSUPPORT Deview2015 2등
-- 웹표준전문가 과정
-- RightBrain컨설팅, UX Design 과정
+- 코드스쿼드 웹프론트엔드 과정
+- RSUPPORT Deview2015 2등(사내칭찬서비스)
+<!-- - 웹표준전문가 과정 -->
+<!-- - RightBrain컨설팅, UX Design 과정 -->
 - Kipfa, UX디자인스쿨 1기
 - SK Tacademy, 스토리텔링을 통한 모바일 서비스 시나리오
 - 산티아고 순례길 800km
@@ -33,6 +33,6 @@ description: TheReviewIndex aspires to simplify the discovery and research proce
 
 ## Social
 
-- [Github](https://github.com/kimally){:target="_blank"}
+- [Github](https://github.com/lumiloves){:target="_blank"}
 <!-- - LinkedIn -->
 - [Email](mailto:kim.ah.rm@gmail.com)
