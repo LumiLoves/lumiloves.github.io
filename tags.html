@@ -1,30 +1,40 @@
 ---
 layout: page
-title: "Tags"
-permalink: /tags/
+title: "Tag"
+permalink: /tag/
 ---
 
 {% for tag in site.tags %}
 
   <h2 id="{{ tag[0] | slugify }}"># {{ tag[0] }}</h2>
 
-  <!-- {% for desc in site.descriptions %}
+  <!--
+  {% for desc in site.descriptions %}
     {% if desc.cat == cat %}
       <p class="desc"><em>{{ desc.desc }}</em></p>
     {% endif %}
-  {% endfor %} -->
+  {% endfor %}
+  -->
 
   <ul class="posts-list">
     {% for post in tag[1] %}
       <li>
         <strong>
-          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <a href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title }}
+          </a>
         </strong>
-        <span class="post-date">- {{ post.date | date_to_long_string }}</span>
+
+        <span class="post-date">
+          - {{ post.date | date_to_long_string }}
+        </span>
       </li>
     {% endfor %}
   </ul>
 
-  {% if forloop.last == false %}<hr>{% endif %}
+  {% if forloop.last == false %}
+    <hr>
+  {% endif %}
+
 {% endfor %}
 <br>
